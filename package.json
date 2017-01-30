@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": ".\\node_modules\\.bin\\tsc"
+    "compile": ".\\node_modules\\.bin\\tsc",
+    "serve": ".\\node_modules\\.bin\\static"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/core-decorators": "^0.10.30",
     "core-decorators": "^0.15.0"
+  },
+  "devDependencies": {
+    "node-static": "^0.7.9"
   }
 }
