@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="node_modules/systemjs/dist/system.js"></script>
+<script>
+    System.config({
+        defaultExtension: 'js',
+        maps: {
+            'core-decorators': './node_modules/core-decorators/lib'
+        },
+        baseURL: 'node_modules',
+        packageConfigPaths: ['./node_modules/*/package.json'],
+        packages: {
+            'core-decorators': { defaultExtension: 'js' },
+            '.': {
+                defaultExtension: 'js'
+            }
+        }
+    });
+
+    SystemJS.import('./src/index.js');
+</script>
+</body>
+</html>
