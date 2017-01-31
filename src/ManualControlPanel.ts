@@ -151,7 +151,7 @@ export default class ManualControlPanel {
     }
 
     private getStateMask(position: number): number {
-        let stateMask;
+        let stateMask: number;
 
         if (position === 0) {
             stateMask = 0b0001;
@@ -167,7 +167,7 @@ export default class ManualControlPanel {
     }
 
     private checkNecessaryState(state: number): boolean {
-        if (~this.potentialNeededStates.indexOf(state)) {
+        if (~this.potentialNeededStates.indexOf(state) && this.resolvedPosition >= 3) {
             Helper.write('Maybe it is a necessary state');
             return true;
         }

@@ -7,8 +7,15 @@
     "sourceMap": true,
     "experimentalDecorators": true
   },
+  "baseUrl": ".",
+  "paths": {
+    "core-decorators": ["node_modules/core-decorators"]
+  },
+  "lib" : ["ES2016"],
   "include": [
-    "src/**/*",
-    "node_modules/core-decorators"
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
