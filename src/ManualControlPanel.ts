@@ -167,7 +167,7 @@ export default class ManualControlPanel {
     }
 
     private checkNecessaryState(state: number): boolean {
-        if (~this.potentialNeededStates.indexOf(state) && this.resolvedPosition >= 3) {
+        if (~this.potentialNeededStates.indexOf(state) && this.resolvedPosition > 3) {
             Helper.write('Maybe it is a necessary state');
             return true;
         }
